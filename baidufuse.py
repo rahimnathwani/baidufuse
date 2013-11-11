@@ -60,7 +60,7 @@ class BaiduFS(Fuse):
         self.disk = BaiduPan(Baidufuseconf.baidu_token)
 
     def get_abs_path(self, path):
-        return "%s%s" % (baidu_rootdir, path)
+        return "%s%s" % (Baidufuseconf.baidu_rootdir, path)
 
     def getattr(self, path):
         logger.error("getattr is: " + path)
